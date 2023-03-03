@@ -52,8 +52,8 @@ def get_ancestors(person):
     ancestors = []
     parents = get_parents(person)
     ancestors.extend(parents)
-    for child in parents:
-        ancestors.extend(get_ancestors(child))
+    for parent in parents:
+        ancestors.extend(get_ancestors(parent))
     return ancestors
 
 # Test the functions
